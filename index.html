@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVA STORE</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #101010;
+  color: white;
+}
+
+header {
+  background: #080808;
+  padding: 25px 15px;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+header p {
+  color: #888;
+  font-size: 12px;
+  letter-spacing: 3px;
+}
+
+.hero {
+  padding: 50px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, #222, #080808);
+}
+
+.hero h2 {
+  font-size: 32px;
+  letter-spacing: 3px;
+}
+
+.hero p {
+  color: #aaa;
+}
+
+button {
+  padding: 12px 20px;
+  background: white;
+  color: black;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.section-title {
+  padding: 20px;
+  letter-spacing: 3px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 12px;
+}
+
+.product {
+  background: #1c1c1c;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.product img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.product h3 {
+  font-size: 15px;
+}
+
+.price {
+  color: #bbb;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 15px;
+  background: #080808;
+  color: #888;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">NOVA STORE</div>
+  <p>YOUR STYLE. YOUR RULES.</p>
+</header>
+
+<section class="hero">
+  <h2>NEW COLLECTION</h2>
+  <p>Өөрийн хэв маягаа бүтээ.</p>
+  <button onclick="document.getElementById('shop').scrollIntoView({behavior:'smooth'})">
+    БАРАА ҮЗЭХ
+  </button>
+</section>
+
+<h2 class="section-title" id="shop">OUR PRODUCTS</h2>
+
+<section class="products">
+
+  <div class="product">
+    <img src="https://placehold.co/400x500/222/fff?text=HOODIE"
+         alt="Black Hoodie">
+    <h3>Black Hoodie</h3>
+    <p class="price">65,000₮</p>
+    <button onclick="order('Black Hoodie',65000)">Захиалах</button>
+  </div>
+
+  <div class="product">
+    <img src="https://placehold.co/400x500/222/fff?text=T-SHIRT"
+         alt="Black T-shirt">
+    <h3>Black T-shirt</h3>
+    <p class="price">35,000₮</p>
+    <button onclick="order('Black T-shirt',35000)">Захиалах</button>
+  </div>
+
+  <div class="product">
+    <img src="https://placehold.co/400x500/222/fff?text=PANTS"
+         alt="Black Pants">
+    <h3>Black Pants</h3>
+    <p class="price">55,000₮</p>
+    <button onclick="order('Black Pants',55000)">Захиалах</button>
+  </div>
+
+  <div class="product">
+    <img src="https://placehold.co/400x500/222/fff?text=CAP"
+         alt="Black Cap">
+    <h3>Black Cap</h3>
+    <p class="price">25,000₮</p>
+    <button onclick="order('Black Cap',25000)">Захиалах</button>
+  </div>
+
+</section>
+
+<footer>
+  <h3>NOVA STORE</h3>
+  <p>Биднийг сонгосонд баярлалаа.</p>
+  <p>© 2026 NOVA STORE</p>
+</footer>
+
+<script>
+function order(name, price) {
+  alert(
+    "NOVA STORE\n\n" +
+    "Бараа: " + name + "\n" +
+    "Үнэ: " + price.toLocaleString("en-US") + "₮\n\n" +
+    "Захиалга өгөхийн тулд дэлгүүртэй холбогдоорой."
+  );
+}
+</script>
+
+</body>
+</html>
